@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "476449559978",
+    "project_id": "loginbase-101df",
+    "storage_bucket": "loginbase-101df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476449559978:android:cb82853817fb2a367f47d3",
+        "android_client_info": {
+          "package_name": "ivan.pacheco.loginbase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9z6fnXYX02R1BaLsN_XfHNmOHtc8UoWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

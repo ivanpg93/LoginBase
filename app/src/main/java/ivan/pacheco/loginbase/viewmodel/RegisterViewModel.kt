@@ -5,10 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import ivan.pacheco.loginbase.firebase.FirebaseAuthSingleton
+import ivan.pacheco.loginbase.firebase.FirestoreSingleton
 import javax.inject.Inject
 
 @HiltViewModel
-class RegisterViewModel @Inject constructor(val firebaseAuth: FirebaseAuthSingleton) : ViewModel() {
+class RegisterViewModel @Inject constructor(val firebaseAuth: FirebaseAuthSingleton, val db: FirestoreSingleton) : ViewModel() {
 
     val auth = firebaseAuth.getFirebaseAuth()
 
@@ -29,7 +30,7 @@ class RegisterViewModel @Inject constructor(val firebaseAuth: FirebaseAuthSingle
      */
     fun validateEmail(email: String): Boolean {
         val message: String
-        if (email.isNullOrBlank()) {
+        if (email.isBlank()) {
             message = "El correo electrónico no puede estar vacío"
             isEmailValid.value = false
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {

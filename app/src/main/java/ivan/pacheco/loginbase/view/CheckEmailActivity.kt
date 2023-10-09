@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint
 import ivan.pacheco.loginbase.databinding.ActivityCheckEmailBinding
 import ivan.pacheco.loginbase.utils.Utils.customAlertWarning
+import ivan.pacheco.loginbase.utils.Utils.goToLogin
 import ivan.pacheco.loginbase.utils.Utils.goToMain
 import ivan.pacheco.loginbase.viewmodel.CheckEmailViewModel
 
@@ -24,17 +25,30 @@ class CheckEmailActivity : AppCompatActivity() {
         checkEmailViewModel.onCreate()
 
         checkEmailViewModel.user.observe(this) { user ->
-            if (user != null && user.isEmailVerified) {
-                goToMain(this)
-            } else {
-                customAlertWarning(this,
-                    "Debes verificar la cuenta con el correo electrónico que se te ha enviado anteriormente antes de continuar."
-                )
+            if (user != null)
+                if (user.isEmailVerified) {
+                    goToMain(this)
+                } else {
+                    customAlertWarning(
+                        this,
+                        "Debes verificar la cuenta con el correo electrónico que se te ha enviado anteriormente antes de continuar."
+                    )
+                }
+            else {
+                goToLogin(this)
             }
         }
 
         binding.btnContinue.setOnClickListener {
             checkEmailViewModel.reloadUser()
+            if (checkEmailViewModel.user.value!!.isEmailVerified) {
+                goToMain(this)
+            } else {
+                customAlertWarning(
+                    this,
+                    "Debes verificar la cuenta con el correo electrónico que se te ha enviado anteriormente antes de continuar."
+                )
+            }
         }
 
         binding.btnExit.setOnClickListener {

@@ -7,12 +7,11 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint
 import ivan.pacheco.loginbase.databinding.ActivityRegisterBinding
-import ivan.pacheco.loginbase.firebase.FirebaseAuthSingleton
+import ivan.pacheco.loginbase.model.UserModel
 import ivan.pacheco.loginbase.utils.Utils
 import ivan.pacheco.loginbase.utils.Utils.customAlertError
 import ivan.pacheco.loginbase.utils.Utils.goToCheckEmail
 import ivan.pacheco.loginbase.viewmodel.RegisterViewModel
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class RegisterActivity : AppCompatActivity() {
@@ -104,6 +103,8 @@ class RegisterActivity : AppCompatActivity() {
                     binding.txtPassword.text.toString()
                 ).addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
+                        val user = UserModel(binding.txtUserName.text.toString(), binding.txtPassword.text.toString())
+                        registerViewModel.db.saveUser(user)
                         registerViewModel.firebaseAuth.sendEmailVerification(registerViewModel.auth.currentUser, this)
                         goToCheckEmail(this)
                     }

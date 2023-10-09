@@ -7,6 +7,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import ivan.pacheco.loginbase.databinding.ActivityLoginBinding
 import ivan.pacheco.loginbase.utils.Utils
 import ivan.pacheco.loginbase.utils.Utils.customAlertError
+import ivan.pacheco.loginbase.utils.Utils.goToMain
 import ivan.pacheco.loginbase.utils.Utils.goToRecoveryPassword
 import ivan.pacheco.loginbase.utils.Utils.goToRegister
 import ivan.pacheco.loginbase.viewmodel.LoginViewModel
@@ -51,7 +52,7 @@ class LoginActivity : AppCompatActivity() {
                     username, password
                 ).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        loginViewModel.sendVariablesToMain(this, username, password)
+                        goToMain(this)
                     } else {
                         customAlertError(this, errorMessage)
                     }

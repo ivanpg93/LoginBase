@@ -1,9 +1,27 @@
 <resources>
+    <!-- Menús y Pantallas -->
     <string name="app_name">LoginBase</string>
     <string name="home">Home</string>
     <string name="favs">Favs</string>
     <string name="profile">Perfil</string>
     <string name="logout">Cerrar sesión</string>
+    <string name="register">Registrar Usuario</string>
+    <string name="recovery">Recuperar Contraseña</string>
+    <string name="verifyEmail">Verificar Email </string>
+
+    <!-- Botones -->
+    <string name="continuar">Continuar</string>
+    <string name="volver">Volver</string>
+    <string name="recoveryPassword">RECUPERAR CONTRASEÑA</string>
+    <string name="crearCuenta">CREAR MI CUENTA</string>
+
+    <!-- Mensajes -->
+    <string name="correoElectronico">Correo electrónico</string>
+    <string name="password">Password</string>
+    <string name="exampleEmail">example@gmail.com</string>
+    <string name="examplePassword">contraseña (mínimo 6 caracteres)</string>
+    <string name="msgInsertEmail">Introduce tu correo electrónico</string>
+    <string name="msgVerifyEmail">Para completar el registro verifica tu correo y después haz clic en continuar.</string>
 
     <!-- Alerts -->
     <string name="alertError">¡ERROR!</string>

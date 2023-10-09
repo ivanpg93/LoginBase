@@ -13,44 +13,45 @@
         android:layout_margin="40dp"
         android:gravity="center"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="36sp"
         android:textStyle="bold"
-        android:text="Verificación de email"
+        android:text="@string/verifyEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tvInfo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvInfo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@color/yellow"
-        android:layout_margin="20dp"
+        android:layout_marginVertical="100dp"
+        android:layout_marginHorizontal="40dp"
         android:gravity="center"
-        android:text="Para completar el registro verifica tu correo y después haz clic en continuar."
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/msgVerifyEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnContinue"/>
 
     <Button
         android:id="@+id/btnContinue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/green"
-        android:text="Continuar"
+        android:text="@string/continuar"
         android:layout_margin="40dp"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfo"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
         android:id="@+id/btnExit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/red"
-        android:text="Volver"
+        android:text="@string/volver"
         android:layout_margin="40dp"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@+id/btnContinue"

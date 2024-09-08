@@ -25,7 +25,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
-        android:text="Correo electrónico"
+        android:text="@string/login_txt_email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="10dp"
-        android:hint="example@gmail.com"
+        android:hint="@string/login_hint_email"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvUserName" />
@@ -47,7 +47,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
-        android:text="Password"
+        android:text="@string/login_txt_password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtUserName" />
 
@@ -67,7 +67,7 @@
             android:id="@+id/txtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Contraseña (mínimo 6 caracteres)"
+            android:hint="@string/login_hint_password"
             android:inputType="textPassword"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="parent" />
@@ -78,9 +78,9 @@
         android:id="@+id/txtRecoveryPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_margin="20dp"
-        android:text="¿Has olvidado tu contraseña?"
+        android:gravity="center"
+        android:text="@string/login_txt_recovery_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputLayout" />
@@ -92,7 +92,8 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="30dp"
         android:background="@color/green"
-        android:text="INICIAR SESIÓN"
+        android:text="@string/login_btn_login"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtRecoveryPassword" />
@@ -101,17 +102,33 @@
         android:id="@+id/txtRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_margin="20dp"
-        android:text="¿Todavía no tienes cuenta? Regístrate"
+        android:gravity="center"
+        android:text="@string/login_txt_register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
-    <ProgressBar
+    <!-- Loading -->
+    <FrameLayout
         android:id="@+id/loadingView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone" />
+        android:elevation="10dp"
+        android:visibility="gone">
+
+        <!-- Background semi transparent -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

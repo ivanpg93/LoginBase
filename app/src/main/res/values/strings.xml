@@ -36,6 +36,15 @@
     <string name="error_user_already_exists">Ya existe un usuario con ese email</string>
     <string name="error_unknown">Ha ocurrido un error desconocido</string>
 
+    <!-- Login -->
+    <string name="login_txt_email">Correo electrónico</string>
+    <string name="login_hint_email">example@gmail.com</string>
+    <string name="login_txt_password">Password</string>
+    <string name="login_hint_password">Contraseña (mínimo 6 caracteres)</string>
+    <string name="login_txt_recovery_password">¿Has olvidado tu contraseña?</string>
+    <string name="login_btn_login">Iniciar sesión</string>
+    <string name="login_txt_register">¿Todavía no tienes cuenta? Regístrate</string>
+
     <!-- Register -->
     <string name="register_error_invalid_email">Escribe un correo electrónico válido</string>
     <string name="register_error_password_length">La contraseña debe tener mínimo 6 caracteres</string>

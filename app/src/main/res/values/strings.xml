@@ -1,4 +1,9 @@
 <resources>
+    <!-- General -->
+    <string name="ok">OK</string>
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+
     <!-- Menús y Pantallas -->
     <string name="app_name">LoginBase</string>
     <string name="home">Home</string>
@@ -23,8 +28,24 @@
     <string name="msgInsertEmail">Introduce tu correo electrónico</string>
     <string name="msgVerifyEmail">Para completar el registro verifica tu correo y después haz clic en continuar.</string>
 
-    <!-- Alerts -->
+    <!-- Errors -->
     <string name="alertError">¡ERROR!</string>
     <string name="alertWarning">¡ALERTA!</string>
+    <string name="error_connection">No se ha podido establecer conexión. Revisa que tengas conexión a internet y vuelve a intentarlo</string>
+    <string name="error_credentials">El usuario o la contraseña no son válidos</string>
+    <string name="error_user_already_exists">Ya existe un usuario con ese email</string>
+    <string name="error_unknown">Ha ocurrido un error desconocido</string>
+
+    <!-- Register -->
+    <string name="register_error_invalid_email">Escribe un correo electrónico válido</string>
+    <string name="register_error_password_length">La contraseña debe tener mínimo 6 caracteres</string>
+    <string name="register_error_equal_password">"Las contraseñas deben coincidir"</string>
+
+    <!-- Recovery password -->
+    <string name="recovery_password_error_invalid_email">Introduce un email válido</string>
+
+    <!-- Check Email -->
+    <string name="check_email_verification_email_sent">Se ha enviado un correo de verificación a tu correo electrónico. Debes verificar tu cuenta antes de continuar</string>
+    <string name="check_email_verify_your_account">Debes verificar la cuenta antes de continuar. Revisa tu bandeja de entrada</string>
 
 </resources>

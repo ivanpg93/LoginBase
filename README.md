@@ -19,8 +19,8 @@
  # Diseño de la APP
  <p>Aquí se muestran las pantallas de la APP.</p>
   <p>
-    <img src="https://github.com/ivanpg93/LoginBase/blob/master/Login.png"/>
-    <img src="https://github.com/ivanpg93/LoginBase/blob/master/RegisterUser.png"/>
-    <img src="https://github.com/ivanpg93/LoginBase/blob/master/VerifyEmail.png"/>
-    <img src="https://github.com/ivanpg93/LoginBase/blob/master/RecoveryPassword.png"/>
+    <img src="https://github.com/ivanpg93/LoginBase/blob/main/Login.png"/>
+    <img src="https://github.com/ivanpg93/LoginBase/blob/main/RegisterUser.png"/>
+    <img src="https://github.com/ivanpg93/LoginBase/blob/main/VerifyEmail.png"/>
+    <img src="https://github.com/ivanpg93/LoginBase/blob/main/RecoveryPassword.png"/>
   </p>
